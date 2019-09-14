@@ -28,4 +28,8 @@ export class LandingComponent implements OnInit {
     this.postDetailed = post;
   }
 
+  public dismissAll(){
+    this.postList.dismissAll();
+  }
+
 }

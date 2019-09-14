@@ -10,9 +10,15 @@ export class LeftBarComponent {
   @Input() posts: Post[];
   @Output()
   open: EventEmitter<Post> = new EventEmitter();
+  @Output()
+  dismiss: EventEmitter<any> = new EventEmitter();
 
   public openInDetail(post) {
     this.open.emit(post);
+  }
+
+  public dismissAll() {
+    this.dismiss.emit(true);
   }
 
 }

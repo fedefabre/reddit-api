@@ -1,1 +1,4 @@
 <app-post-row *ngFor="let post of posts" [post]="post" (click)="openInDetail(post)"></app-post-row>
+<div id="dismissAll">
+    <button (click)="dismissAll()">Dismiss all</button>
+</div>
