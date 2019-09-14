@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CoreService } from 'src/app/services/core.service';
 
 @Component({
   selector: 'app-landing',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private coreService: CoreService) { }
 
   ngOnInit() {
+    this.coreService.getTopPost().subscribe( response => {
+      console.log(response);
+    })
   }
 
 }
