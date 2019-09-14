@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Post } from 'src/app/models/post';
 
 @Component({
   selector: 'app-right-section',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./right-section.component.less']
 })
 export class RightSectionComponent implements OnInit {
+  @Input() post: Post;
 
   constructor() { }
 

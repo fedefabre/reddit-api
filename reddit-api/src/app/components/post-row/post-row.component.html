@@ -1,10 +1,9 @@
-
-<div (click)="post.open()" *ngIf="post.visible">
+<div (click)="openInDetail()" *ngIf="post.visible">
     <p *ngIf="post.unreadStatus"><strong>unread</strong></p>
     <p>{{post.title}}</p>
     <p>{{post.author}}</p>
     <p>{{post.entryDate | dateFormatter}}</p>
-    <p><img [src]="post.thumbnail" [alt]="post.title"></p>
+    <img *ngIf="post.thumbnail_height" [src]="post.thumbnail" [alt]="post.title">
     <p>Comments: {{post.numberOfComment}}</p>    
     <button (click)="post.dismiss()">Dismiss</button>
     <hr>

@@ -1,9 +1,9 @@
 <div class="container" *ngIf="loaded">
   <div class="row">
     <div class="col-4">
-      <app-left-bar [posts]="postList.posts"></app-left-bar>
+      <app-left-bar [posts]="postList.posts" (open)="openInDetail($event)"></app-left-bar>
     </div>
     <div class="col">
-      <app-right-section></app-right-section>
+      <app-right-section *ngIf="postDetailed" [post]="postDetailed"></app-right-section>
     </div>
 </div>

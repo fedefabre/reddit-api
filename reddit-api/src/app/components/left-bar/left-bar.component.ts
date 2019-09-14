@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Post } from 'src/app/models/post';
 
 @Component({
@@ -6,13 +6,13 @@ import { Post } from 'src/app/models/post';
   templateUrl: './left-bar.component.html',
   styleUrls: ['./left-bar.component.less']
 })
-export class LeftBarComponent implements OnInit {
+export class LeftBarComponent {
   @Input() posts: Post[];
+  @Output()
+  open: EventEmitter<Post> = new EventEmitter();
 
-  constructor() { }
-
-  ngOnInit() {
-    console.log(this.posts);
+  public openInDetail(post) {
+    this.open.emit(post);
   }
 
 }

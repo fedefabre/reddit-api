@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Post } from 'src/app/models/post';
 
 @Component({
@@ -6,12 +6,8 @@ import { Post } from 'src/app/models/post';
   templateUrl: './post-row.component.html',
   styleUrls: ['./post-row.component.less']
 })
-export class PostRowComponent implements OnInit {
+export class PostRowComponent {
   @Input() post: Post;
 
   constructor() { }
-
-  ngOnInit() {
-  }
-
 }
