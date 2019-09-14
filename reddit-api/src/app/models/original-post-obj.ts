@@ -546,7 +546,7 @@ export interface Data2 {
     crosspost_parent: string;
 }
 
-export interface Child {
+export interface PostObj {
     kind: string;
     data: Data2;
 }
@@ -554,7 +554,7 @@ export interface Child {
 export interface Data {
     modhash: string;
     dist: number;
-    children: Child[];
+    children: PostObj[];
     after: string;
     before?: any;
 }
