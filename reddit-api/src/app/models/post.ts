@@ -4,16 +4,24 @@ export class Post {
     public title: string;
     public author: string;
     public entryDate: number; // Check format
-    public image?: Media;
+    public thumbnail: string;
     public numberOfComment: number;
     public unreadStatus = true; 
-
+    public visible = true;
 
     constructor(private originalPost: PostObj){
         this.title = originalPost.data.title;
         this.author = originalPost.data.author;
         this.entryDate = originalPost.data.created;
-        this.image = originalPost.data.media;
+        this.thumbnail = originalPost.data.thumbnail;
         this.numberOfComment = originalPost.data.num_comments;
+    }
+
+    public open(){
+        this.unreadStatus = false;
+    }
+
+    public dismiss(){
+        this.visible = false;
     }
 }

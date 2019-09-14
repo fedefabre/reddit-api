@@ -12,8 +12,6 @@ export class PostRowComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    debugger;
-    console.log(this.post);
   }
 
 }
