@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Post } from 'src/app/models/post';
 
 @Component({
   selector: 'app-left-bar',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./left-bar.component.less']
 })
 export class LeftBarComponent implements OnInit {
+  @Input() posts: Post[];
 
   constructor() { }
 
   ngOnInit() {
+    console.log(this.posts);
   }
 
 }

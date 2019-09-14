@@ -10,12 +10,14 @@ import { OriginalPostObj } from 'src/app/models/original-post-obj';
 })
 export class LandingComponent implements OnInit {
   postList: PostList;
+  loaded = false;
 
   constructor(private coreService: CoreService) { }
 
   ngOnInit() {
     this.coreService.getTopPost().subscribe( (response: OriginalPostObj) => {
       this.postList = new PostList(response);
+      this.loaded = true;
     })
   }
 

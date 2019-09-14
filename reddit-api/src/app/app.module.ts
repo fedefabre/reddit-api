@@ -9,13 +9,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { LeftBarComponent } from './components/left-bar/left-bar.component';
 import { RightSectionComponent } from './components/right-section/right-section.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PostRowComponent } from './components/post-row/post-row.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
     LeftBarComponent,
-    RightSectionComponent
+    RightSectionComponent,
+    PostRowComponent
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,9 @@
-<div class="container">
+<div class="container" *ngIf="loaded">
   <div class="row">
     <div class="col-4">
-      1 of 3
+      <app-left-bar [posts]="postList.posts"></app-left-bar>
     </div>
     <div class="col">
-      2 of 3 (wider)
+      <app-right-section></app-right-section>
     </div>
 </div>
