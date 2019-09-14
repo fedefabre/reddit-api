@@ -2,9 +2,9 @@ import { OriginalPostObj } from './original-post-obj';
 import { Post } from './post';
 
 export class PostList {
-    posts: Post[];
+    posts: Post[] = [];
 
     constructor(private originalPostObj: OriginalPostObj){
-        
+        originalPostObj.data.children.forEach( post => this.posts.push(new Post(post)));
     }
 }
