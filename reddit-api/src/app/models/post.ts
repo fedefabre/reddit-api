@@ -12,7 +12,7 @@ export class Post {
     constructor(private originalPost: PostObj){
         this.title = originalPost.data.title;
         this.author = originalPost.data.author;
-        this.entryDate = originalPost.data.created;
+        this.entryDate = originalPost.data.created_utc;
         this.thumbnail = originalPost.data.thumbnail;
         this.numberOfComment = originalPost.data.num_comments;
     }

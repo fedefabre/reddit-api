@@ -10,6 +10,7 @@ import { LeftBarComponent } from './components/left-bar/left-bar.component';
 import { RightSectionComponent } from './components/right-section/right-section.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PostRowComponent } from './components/post-row/post-row.component';
+import { DateFormatterPipe } from './pipes/date-formatter.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PostRowComponent } from './components/post-row/post-row.component';
     LandingComponent,
     LeftBarComponent,
     RightSectionComponent,
-    PostRowComponent
+    PostRowComponent,
+    DateFormatterPipe
   ],
   imports: [
     BrowserModule,
