@@ -11,6 +11,7 @@ import { RightSectionComponent } from './components/right-section/right-section.
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PostRowComponent } from './components/post-row/post-row.component';
 import { DateFormatterPipe } from './pipes/date-formatter.pipe';
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DateFormatterPipe } from './pipes/date-formatter.pipe';
     LeftBarComponent,
     RightSectionComponent,
     PostRowComponent,
-    DateFormatterPipe
+    DateFormatterPipe,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,

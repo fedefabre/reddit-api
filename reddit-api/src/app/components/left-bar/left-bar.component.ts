@@ -13,12 +13,19 @@ export class LeftBarComponent {
   @Output()
   dismiss: EventEmitter<any> = new EventEmitter();
 
+  public page = 1;
+  public pageSize = 10;
+
   public openInDetail(post) {
     this.open.emit(post);
   }
 
   public dismissAll() {
     this.dismiss.emit(true);
+  }
+
+  public changePage(number: number) {
+    this.page = number;
   }
 
 }
