@@ -1,5 +1,8 @@
 <ul>
-    <li *ngFor="let page of pages; let i = index" (click)="change(i + 1)">
+    <li *ngFor="let page of pages; let i = index" 
+    (click)="change(i + 1)" 
+    [ngClass]="{'selected': pageSelected === i + 1 }"
+    >
         {{i + 1}}
     </li>
 </ul>

@@ -1,13 +1,36 @@
-:host{
+:host {
 
-    li.selected{
-        color:red;
-    }
+    section {
+        padding: 20px;
+        width: 400px;
+        height: 100%;
 
-    #dismissAll{
-        position: fixed;
-        bottom: 0px;
-        background: grey;
-        padding: 10px 50px;     
+        header{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0px;
+            align-items: center;
+        }
+
+        main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div.container {
+            background: grey;
+        }
+
+        li.selected {
+            color: red;
+        }
+
+        .dismissButton{
+            width: inherit;
+        }
+
     }
 }

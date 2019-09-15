@@ -11,6 +11,8 @@ export class PaginationComponent implements OnInit {
   @Output()
   changePage: EventEmitter<any> = new EventEmitter();
 
+  pageSelected = 1;
+
   public pages = [];
 
   ngOnInit() {
@@ -18,6 +20,7 @@ export class PaginationComponent implements OnInit {
   }
 
   change(numberOfPage){
+    this.pageSelected = numberOfPage;
     this.changePage.emit(numberOfPage);
   }
 

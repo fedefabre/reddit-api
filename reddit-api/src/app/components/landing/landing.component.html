@@ -1,6 +1,6 @@
 <div class="container" *ngIf="loaded">
   <div class="row">
-    <div class="col-4">
+    <div class="col-4" class="side-bar">
       <app-left-bar [posts]="postList.posts" (open)="openInDetail($event)" (dismiss)="dismissAll()"></app-left-bar>
     </div>
     <div class="col">

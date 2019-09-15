@@ -1,3 +1,7 @@
-<p>{{post.author}}</p>
-<img *ngIf="post.thumbnail_height" [src]="post.thumbnail" [alt]="post.title">
-<p>{{post.title}}</p>
+<header>
+    <h1>{{post.title}}</h1>
+</header>
+<main>
+    <img *ngIf="post.thumbnail_height" [src]="post.thumbnail" [alt]="post.title">
+    <p>{{post.title}}</p>
+</main>
